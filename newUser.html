@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="StyleSheets/newUser.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik+Mono+One|Righteous|Rajdhani" rel="stylesheet">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,14 +25,18 @@
 
           <div class="co-md-4">
               <section class="reg-form">
-                <form  name="registration" method="post" role="login" onsubmit="validate()">
+                <form  name="registration" method="post" role="login" >
                     <div class="title">Experience Music</div>
                     <input type="text" name="Name" placeholder="Username" required class="form-control input-lg"  />
+                    <p id="usrError"></p>
                     <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+                    <p id="passError"></p>
                     <input type="date" name="BirthDate" placeholder="BirthDate" required class="form-control input-lg"/>
+                    <input type="text" name="Phone" placeholder="Phone Number 000-0000-0000" required class="form-control input-lg"/>
+                    <p id="phoneError"></p>
                     <input type="text" name="Address" placeholder="Address" class="form-control input-lg"/>
 
-                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="validate()">Register</button>
+                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="return validate()">Register</button>
                 </form>
               </section>
           </div>
@@ -46,6 +49,8 @@
         $('#footer').load('footer.html');
       </script>
     </div>
+
+    <script type="text/javascript" src="/scripts/formValidation.js"></script>
 
   </body>
 
