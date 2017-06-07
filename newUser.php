@@ -8,7 +8,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   </head>
 
   <body>
@@ -25,11 +24,11 @@
 
           <div class="co-md-4">
               <section class="reg-form">
-                <form  name="registration" method="post" role="login" >
+                <form  name="registration" method="POST" role="login" enctype=”multipart/form-data” action="loginForm.html" >
                     <div class="title">Experience Music</div>
                     <input type="text" name="Name" placeholder="Username" required class="form-control input-lg"  />
                     <p id="usrError"></p>
-                    <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+                    <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="" />
                     <p id="passError"></p>
                     <input type="date" name="BirthDate" placeholder="BirthDate" required class="form-control input-lg"/>
                     <input type="text" name="Phone" placeholder="Phone Number 000-0000-0000" required class="form-control input-lg"/>
@@ -39,6 +38,7 @@
                     <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="return validate()">Register</button>
                 </form>
               </section>
+              <?php include 'register.php'; ?>
           </div>
       </div>
     </div>

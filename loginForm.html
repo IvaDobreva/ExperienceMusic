@@ -25,7 +25,7 @@
 
           <div class="co-md-4">
               <section class="login-form">
-                <form  name="login" method="post" role="login" onsubmit="validate()">
+                <form  name="login" method="post" role="login" action="login.php" onsubmit="validate()">
                     <div class="title">Experience Music</div>
                     <input type="text" name="Name" placeholder="Username" required class="form-control input-lg"  />
                     <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
@@ -34,7 +34,7 @@
 
                     <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="validate()">Sign in</button>
                     <div>
-                        <a href="newUser.html">Create account</a>
+                        <a href="newUser.php">Create account</a>
                     </div>
                 </form>
               </section>

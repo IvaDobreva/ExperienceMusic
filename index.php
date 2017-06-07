@@ -16,7 +16,6 @@
   </head>
 
   <body>
-
     <div id="navBar">
       <script type="text/javascript">
         $('#navBar').load('navigation.html');
