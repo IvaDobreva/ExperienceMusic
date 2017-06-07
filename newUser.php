@@ -21,10 +21,10 @@
     <div class="container">
       <div class="row" id="pwd-container">
           <div class="col-md-4"></div>
-
+          <?php include 'register.php'; ?>
           <div class="co-md-4">
               <section class="reg-form">
-                <form  name="registration" method="POST" role="login" enctype=”multipart/form-data” action="loginForm.html" >
+                <form  name="registration" method="POST" role="login" enctype=”multipart/form-data” >
                     <div class="title">Experience Music</div>
                     <input type="text" name="Name" placeholder="Username" required class="form-control input-lg"  />
                     <p id="usrError"></p>
@@ -35,10 +35,10 @@
                     <p id="phoneError"></p>
                     <input type="text" name="Address" placeholder="Address" class="form-control input-lg"/>
 
-                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="return validate()">Register</button>
+                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="validate()">Register</button>
                 </form>
               </section>
-              <?php include 'register.php'; ?>
+
           </div>
       </div>
     </div>

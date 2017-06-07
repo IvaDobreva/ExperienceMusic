@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   </head>
 
   <body>
@@ -28,7 +27,7 @@
                 <form  name="login" method="post" role="login" action="login.php" onsubmit="validate()">
                     <div class="title">Experience Music</div>
                     <input type="text" name="Name" placeholder="Username" required class="form-control input-lg"  />
-                    <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+                    <input type="password" class="form-control input-lg" name="Password" placeholder="Password" required="" />
 
                     <div class="pwstrength_viewport_progress"></div>
 
@@ -37,6 +36,7 @@
                         <a href="newUser.php">Create account</a>
                     </div>
                 </form>
+                <?php include 'login.php'; ?>
               </section>
           </div>
       </div>
