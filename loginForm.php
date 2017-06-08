@@ -24,19 +24,19 @@
 
           <div class="co-md-4">
               <section class="login-form">
-                <form  name="login" method="post" role="login" action="login.php" onsubmit="validate()">
+                <form  name="login" method="post" role="login">
                     <div class="title">Experience Music</div>
                     <input type="text" name="Name" placeholder="Username" required class="form-control input-lg"  />
                     <input type="password" class="form-control input-lg" name="Password" placeholder="Password" required="" />
 
                     <div class="pwstrength_viewport_progress"></div>
 
-                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="validate()">Sign in</button>
+                    <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" >Sign in</button>
                     <div>
                         <a href="newUser.php">Create account</a>
                     </div>
+                    <?php include 'login.php'; ?>
                 </form>
-                <?php include 'login.php'; ?>
               </section>
           </div>
       </div>

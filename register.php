@@ -11,7 +11,7 @@ if (isset($_POST['go'])) {
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
+
   //SQL vars
   $usern = NULL;
   $passw = NULL;
@@ -36,11 +36,5 @@ echo "Connected successfully";
 
   $conn->close();
 }
-/*
-if (isset($_REQUEST['Name'])) { $usern = $_REQUEST['Name']; }
-if (isset($_REQUEST['password'])){$passw = ($_REQUEST['password']);}
-if (isset($_REQUEST['BirthDate'])) {$birthdate = ($_REQUEST['BirthDate']);}
-if (isset($_REQUEST['Phone'])) {$phone = ($_REQUEST['Phone']);}
-if (isset($_REQUEST['Address'])) {$address = ($_REQUEST['Address']);}
-*/
- ?>
+
+?>
