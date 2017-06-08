@@ -2,8 +2,7 @@
 <html>
   <head>
     <title> Experience Music</title>
-
-    <meta charset="utf-8">
+    <meta charset="utf-8">session_destroy();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,7 +13,15 @@
     <link rel="stylesheet" href="StyleSheets/index.css">
 
   </head>
+  <?php
+  // remove all session variables
+  session_unset();
 
+  // destroy the session
+  session_destroy();
+
+   session_start();
+  ?>
   <body>
     <div id="navBar">
       <script type="text/javascript">
@@ -101,6 +108,6 @@
         $('#footer').load('footer.html');
       </script>
     </div>
-
+    <?php include "sessionCheck.php"; ?>
   </body>
 </html>

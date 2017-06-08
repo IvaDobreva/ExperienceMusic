@@ -30,6 +30,8 @@ if (isset($_POST['go'])) {
 
     //Send alert to the page
     $message = "Welcome, {$name}! You visited the page {$logNum} times.";
+    session_start();
+    $_SESSION['username'] = $name;
     echo "<script type='text/javascript'>alert('$message');
           window.location.href='index.php';</script>";
   } else {
