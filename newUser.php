@@ -14,7 +14,7 @@
 
     <div id="navBar">
       <script type="text/javascript">
-        $('#navBar').load('navigation.html');
+        $('#navBar').load('navigation.php');
       </script>
     </div>
 

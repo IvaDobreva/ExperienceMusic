@@ -70,6 +70,19 @@
         $('#footer').load('footer.html');
       </script>
     </div>
-    <?php include "sessionCheck.php"; ?>
+
+    <?php
+    if(!isset($_SESSION['login'])){
+      popUp();
+    //  exit; // stop further executing, very important
+    } else {
+      echo "<div id=\"navBar\">
+        <script type=\"text/javascript\">
+          $('#navBar').load('navigation.php');
+        </script>
+      </div>";
+    }
+    ?>
+    
   </body>
 </html>

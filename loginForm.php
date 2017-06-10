@@ -15,13 +15,13 @@ session_start();
   </head>
 
   <body>
-<!--
+
     <div id="navBar">
       <script type="text/javascript">
         $('#navBar').load('navigation.php');
       </script>
     </div>
--->
+
     <div class="container">
       <div class="row" id="pwd-container">
           <div class="col-md-4"></div>

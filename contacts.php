@@ -1,7 +1,11 @@
+<?php
+session_start();
+require_once 'loginCheck.php';
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <?php session_start(); ?>
     <title> Experience Music</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -83,6 +87,17 @@
         $('#footer').load('footer.html');
       </script>
     </div>
-    <?php include "sessionCheck.php"; ?>
+    <?php
+    if(!isset($_SESSION['login'])){
+      popUp();
+    //  exit; // stop further executing, very important
+    } else {
+      echo "<div id=\"navBar\">
+        <script type=\"text/javascript\">
+          $('#navBar').load('navigation.php');
+        </script>
+      </div>";
+    }
+    ?>
   </body>
 </html>

@@ -19,6 +19,12 @@ require_once 'loginCheck.php';
   </head>
   <body>
 
+    <div id="navBar">
+      <script type="text/javascript">
+        $('#navBar').load('navigation.php');
+      </script>
+    </div>
+
     <!-- carousel with pictures -->
     <div id="musicGallery" class="carousel slide" data-ride="carousel">
         <!-- indicators -->
@@ -102,13 +108,7 @@ require_once 'loginCheck.php';
     <?php
     if(!isset($_SESSION['login'])){
       popUp();
-    //  exit; // stop further executing, very important
-    } else {
-      echo "<div id=\"navBar\">
-        <script type=\"text/javascript\">
-          $('#navBar').load('navigation.php');
-        </script>
-      </div>";
+      exit; // stop further executing, very important
     }
     ?>
 
