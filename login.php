@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST['go'])) {
   //connect to the DB
   $servername = "127.0.0.1";
@@ -30,8 +31,8 @@ if (isset($_POST['go'])) {
 
     //Send alert to the page
     $message = "Welcome, {$name}! You visited the page {$logNum} times.";
-    session_start();
-    $_SESSION['username'] = $name;
+
+    $_SESSION['login'] = '';
     echo "<script type='text/javascript'>alert('$message');
           window.location.href='index.php';</script>";
   } else {

@@ -1,8 +1,13 @@
+<?php
+session_start();
+require_once 'loginCheck.php';
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title> Experience Music</title>
-    <meta charset="utf-8">session_destroy();
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,23 +16,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik+Mono+One|Righteous|Rajdhani" rel="stylesheet">
     <link rel="stylesheet" href="StyleSheets/index.css">
-
   </head>
-  <?php
-  // remove all session variables
-  session_unset();
-
-  // destroy the session
-  session_destroy();
-
-   session_start();
-  ?>
   <body>
-    <div id="navBar">
-      <script type="text/javascript">
-        $('#navBar').load('navigation.html');
-      </script>
-    </div>
 
     <!-- carousel with pictures -->
     <div id="musicGallery" class="carousel slide" data-ride="carousel">
@@ -108,6 +98,19 @@
         $('#footer').load('footer.html');
       </script>
     </div>
-    <?php include "sessionCheck.php"; ?>
+
+    <?php
+    if(!isset($_SESSION['login'])){
+      popUp();
+    //  exit; // stop further executing, very important
+    } else {
+      echo "<div id=\"navBar\">
+        <script type=\"text/javascript\">
+          $('#navBar').load('navigation.php');
+        </script>
+      </div>";
+    }
+    ?>
+
   </body>
 </html>

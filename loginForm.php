@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -11,13 +15,13 @@
   </head>
 
   <body>
-
+<!--
     <div id="navBar">
       <script type="text/javascript">
-        $('#navBar').load('navigation.html');
+        $('#navBar').load('navigation.php');
       </script>
     </div>
-
+-->
     <div class="container">
       <div class="row" id="pwd-container">
           <div class="col-md-4"></div>

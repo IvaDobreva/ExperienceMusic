@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <link rel="stylesheet" href="StyleSheets/navbar.css">
 
 <!-- navbar -->
@@ -14,7 +17,13 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="loginForm.php">Login</a></li>
+        <?php
+          if (isset($_SESSION['login'])) {
+            echo "<li><a id='login-bar' href=\"logOut.php\">Logout</a></a></li>";
+          } else {
+            echo "<li><a id='login-bar' href=\"loginForm.php\">Login</a></a></li>";
+          }
+        ?>
       </ul>
   </div>
 </nav>
