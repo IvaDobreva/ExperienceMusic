@@ -34,6 +34,7 @@
                     <input type="text" name="Phone" placeholder="Phone Number 000-0000-0000" required class="form-control input-lg"/>
                     <p id="phoneError"></p>
                     <input type="text" name="Address" placeholder="Address" class="form-control input-lg"/>
+                    <input type="email" name="Email" placeholder="Email addres" class="form-control input-lg"/>
 
                     <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="validate()">Register</button>
                 </form>

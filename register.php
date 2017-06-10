@@ -13,19 +13,22 @@ if (isset($_POST['go'])) {
 }
 
   //SQL vars
+  /*
   $usern = NULL;
   $passw = NULL;
   $birthdate = NULL;
   $phone = NULL;
-  $address = NULL;
+  $address = NULL; */
   $usern = $_POST["Name"];
   $passw = $_REQUEST["password"];
-  $birthdate = ($_REQUEST['BirthDate']);
-  $phone = ($_REQUEST["Phone"]);
-  $address = ($_REQUEST["Address"]);
+  $birthdate = $_REQUEST['BirthDate'];
+  $phone = $_REQUEST["Phone"];
+  $address = $_REQUEST["Address"];
+  $email = $_REQUEST["Email"];
 
-  $sql = "INSERT INTO user (username, password, birthdate, phone, address, loginNum)
-  VALUES ('$usern', '$passw', '$birthdate', '$phone', '$address', 0);";
+  //Inserts new id and it's values without check for existing user 
+  $sql = "INSERT INTO user (username, password, birthdate, phone, address, loginNum, email)
+  VALUES ('$usern', '$passw', '$birthdate', '$phone', '$address', 0, '$email');";
 
 
   if ($conn->query($sql) === TRUE) {

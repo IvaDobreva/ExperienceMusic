@@ -18,15 +18,21 @@ function validate() {
   if(!usrName.match(usrRegEx) || (usrName.length<6 || usrName.length>10 )){
     document.getElementById('usrError').innerHTML = usrError;
     event.preventDefault();
+  } else {
+    document.getElementById('usrError').innerHTML = "";
   }
 
   if(pass.length<6 || pass.length>10 || !pass.match(passRegEx)) {
     document.getElementById('passError').innerHTML = passError;
     event.preventDefault();
+  } else {
+    document.getElementById('passError').innerHTML = "";
   }
 
   if((phone.length!=13) || (!phone.match(phoneRegEx))) {
     document.getElementById('phoneError').innerHTML = phoneError;
     event.preventDefault();
+  } else {
+    document.getElementById('phoneError').innerHTML = "";
   }
 }
