@@ -15,12 +15,6 @@
   </head>
 
   <body>
-    <!-- navbar -->
-    <div id="result">
-      <script type="text/javascript">
-      $('#result').load('navigation.html');
-      </script>
-    </div>
 
     <!-- Article -->
     <article>
@@ -83,6 +77,6 @@
       </div>";
     }
     ?>
-    
+
   </body>
 </html>

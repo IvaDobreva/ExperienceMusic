@@ -40,12 +40,6 @@ require_once 'loginCheck.php';
   </head>
 
   <body>
-    <!-- navbar -->
-    <div id="result">
-      <script type="text/javascript">
-      $('#result').load('navigation.html');
-      </script>
-    </div>
 
     <div class="container">
       <p class="text-center contact">CONTACTS</p>
